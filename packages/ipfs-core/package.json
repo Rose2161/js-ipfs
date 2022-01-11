@@ -110,7 +110,7 @@
     "it-pushable": "^1.4.2",
     "it-tar": "^4.0.0",
     "it-to-buffer": "^2.0.0",
-    "just-safe-set": "^2.2.1",
+    "just-safe-set": "^4.0.2",
     "libp2p": "^0.35.4",
     "libp2p-bootstrap": "^0.14.0",
     "libp2p-crypto": "^0.21.0",
