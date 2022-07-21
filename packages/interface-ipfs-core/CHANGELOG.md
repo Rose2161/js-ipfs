@@ -3,36 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.153.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.152.2...interface-ipfs-core@0.153.0) (2021-12-15)
+### [0.155.2](https://www.github.com/ipfs/js-ipfs/compare/interface-ipfs-core-v0.155.1...interface-ipfs-core-v0.155.2) (2022-06-24)
 
 
 ### Bug Fixes
 
-* **pubsub:** multibase in pubsub http rpc ([#3922](https://github.com/ipfs/js-ipfs/issues/3922)) ([6eeaca4](https://github.com/ipfs/js-ipfs/commit/6eeaca452c36fa13be42d704575c577e4ca938f1))
-* return nested value from dag.get ([#3966](https://github.com/ipfs/js-ipfs/issues/3966)) ([45ac973](https://github.com/ipfs/js-ipfs/commit/45ac9730d6484e8324acfbc3579fce052b8452d7)), closes [#3957](https://github.com/ipfs/js-ipfs/issues/3957)
+* make pubsub message types consistent ([#4145](https://www.github.com/ipfs/js-ipfs/issues/4145)) ([00bd3dd](https://www.github.com/ipfs/js-ipfs/commit/00bd3dd0bca7fc705e5e87272972f586d1f161e8))
+
+### [0.155.1](https://www.github.com/ipfs/js-ipfs/compare/interface-ipfs-core-v0.155.0...interface-ipfs-core-v0.155.1) (2022-06-22)
 
 
-### chore
+### Dependencies
 
-* Bump @ipld/dag-cbor to v7 ([#3977](https://github.com/ipfs/js-ipfs/issues/3977)) ([73476f5](https://github.com/ipfs/js-ipfs/commit/73476f55e39ecfb01eb2b4880637aad658f51bc2))
+* The following workspace dependencies were updated
+  * dependencies
+    * ipfs-core-types bumped from ^0.11.0 to ^0.11.1
 
+## [0.155.0](https://www.github.com/ipfs/js-ipfs/compare/interface-ipfs-core-v0.154.3...interface-ipfs-core-v0.155.0) (2022-05-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* This module is now ESM only and there return types of some methods have changed
 
 ### Features
 
-* dht client ([#3947](https://github.com/ipfs/js-ipfs/issues/3947)) ([62d8ecb](https://github.com/ipfs/js-ipfs/commit/62d8ecbc723e693a2544e69172d99c576d187c23))
-* update DAG API to match go-ipfs@0.10 changes ([#3917](https://github.com/ipfs/js-ipfs/issues/3917)) ([38c01be](https://github.com/ipfs/js-ipfs/commit/38c01be03b4fd5f401cd9b698cfdb4237d835b01))
+* update to libp2p 0.37.x ([#4092](https://www.github.com/ipfs/js-ipfs/issues/4092)) ([74aee8b](https://www.github.com/ipfs/js-ipfs/commit/74aee8b3d78f233c3199a3e9a6c0ac628a31a433))
 
 
-### BREAKING CHANGES
+### Dependencies
 
-* **pubsub:** We had to make breaking changes to `pubsub` commands sent over HTTP RPC  to fix data corruption caused by topic names and payload bytes that included `\n`. More details in https://github.com/ipfs/go-ipfs/issues/7939 and https://github.com/ipfs/go-ipfs/pull/8183 
-* On decode of CBOR blocks, `undefined` values will be coerced to `null`
-* `ipfs.dag.put` no longer accepts a `format` arg, it is now `storeCodec` and `inputCodec`.  `'json'` has become `'dag-json'`, `'cbor'` has become `'dag-cbor'` and so on
-* The DHT API has been refactored to return async iterators of query events
-
-
-
-
+* The following workspace dependencies were updated
+  * dependencies
+    * ipfs-core-types bumped from ^0.10.3 to ^0.11.0
 
 ### [0.154.3](https://www.github.com/ipfs/js-ipfs/compare/interface-ipfs-core-v0.154.2...interface-ipfs-core-v0.154.3) (2022-04-20)
 
@@ -103,6 +106,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
   * dependencies
     * ipfs-core-types bumped from ^0.9.0 to ^0.10.0
 
+## [0.153.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.152.2...interface-ipfs-core@0.153.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **pubsub:** multibase in pubsub http rpc ([#3922](https://github.com/ipfs/js-ipfs/issues/3922)) ([6eeaca4](https://github.com/ipfs/js-ipfs/commit/6eeaca452c36fa13be42d704575c577e4ca938f1))
+* return nested value from dag.get ([#3966](https://github.com/ipfs/js-ipfs/issues/3966)) ([45ac973](https://github.com/ipfs/js-ipfs/commit/45ac9730d6484e8324acfbc3579fce052b8452d7)), closes [#3957](https://github.com/ipfs/js-ipfs/issues/3957)
+
+
+### chore
+
+* Bump @ipld/dag-cbor to v7 ([#3977](https://github.com/ipfs/js-ipfs/issues/3977)) ([73476f5](https://github.com/ipfs/js-ipfs/commit/73476f55e39ecfb01eb2b4880637aad658f51bc2))
+
+
+### Features
+
+* dht client ([#3947](https://github.com/ipfs/js-ipfs/issues/3947)) ([62d8ecb](https://github.com/ipfs/js-ipfs/commit/62d8ecbc723e693a2544e69172d99c576d187c23))
+* update DAG API to match go-ipfs@0.10 changes ([#3917](https://github.com/ipfs/js-ipfs/issues/3917)) ([38c01be](https://github.com/ipfs/js-ipfs/commit/38c01be03b4fd5f401cd9b698cfdb4237d835b01))
+
+
+### BREAKING CHANGES
+
+* **pubsub:** We had to make breaking changes to `pubsub` commands sent over HTTP RPC  to fix data corruption caused by topic names and payload bytes that included `\n`. More details in https://github.com/ipfs/go-ipfs/issues/7939 and https://github.com/ipfs/go-ipfs/pull/8183
+* On decode of CBOR blocks, `undefined` values will be coerced to `null`
+* `ipfs.dag.put` no longer accepts a `format` arg, it is now `storeCodec` and `inputCodec`.  `'json'` has become `'dag-json'`, `'cbor'` has become `'dag-cbor'` and so on
+* The DHT API has been refactored to return async iterators of query events
+
+
+
 ## [0.152.2](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.152.1...interface-ipfs-core@0.152.2) (2021-11-24)
 
 **Note:** Version bump only for package interface-ipfs-core
@@ -119,7 +151,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.152.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.151.1...interface-ipfs-core@0.152.0) (2021-11-12)
+## [0.152.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.151.1...interface-ipfs-core@0.152.0) (2021-11-12)
 
 
 ### Bug Fixes
@@ -144,7 +176,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.151.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.150.4...interface-ipfs-core@0.151.0) (2021-09-24)
+## [0.151.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.150.4...interface-ipfs-core@0.151.0) (2021-09-24)
 
 
 ### Features
@@ -199,7 +231,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.150.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.149.0...interface-ipfs-core@0.150.0) (2021-08-17)
+## [0.150.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.149.0...interface-ipfs-core@0.150.0) (2021-08-17)
 
 
 ### Bug Fixes
@@ -216,7 +248,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.149.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.148.0...interface-ipfs-core@0.149.0) (2021-08-11)
+## [0.149.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.148.0...interface-ipfs-core@0.149.0) (2021-08-11)
 
 
 ### Bug Fixes
@@ -239,7 +271,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.148.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.147.0...interface-ipfs-core@0.148.0) (2021-07-27)
+## [0.148.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.147.0...interface-ipfs-core@0.148.0) (2021-07-27)
 
 
 ### Bug Fixes
@@ -269,7 +301,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-# [0.147.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.146.1...interface-ipfs-core@0.147.0) (2021-06-18)
+## [0.147.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.146.1...interface-ipfs-core@0.147.0) (2021-06-18)
 
 
 ### Features
@@ -291,7 +323,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-# [0.146.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.145.1...interface-ipfs-core@0.146.0) (2021-05-26)
+## [0.146.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.145.1...interface-ipfs-core@0.146.0) (2021-05-26)
 
 
 ### Features
@@ -313,7 +345,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-# [0.145.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.144.2...interface-ipfs-core@0.145.0) (2021-05-10)
+## [0.145.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.144.2...interface-ipfs-core@0.145.0) (2021-05-10)
 
 
 ### Bug Fixes
@@ -359,7 +391,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-# [0.144.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.143.1...interface-ipfs-core@0.144.0) (2021-02-01)
+## [0.144.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.143.1...interface-ipfs-core@0.144.0) (2021-02-01)
 
 
 ### Bug Fixes
@@ -393,7 +425,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-# [0.143.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.142.3...interface-ipfs-core@0.143.0) (2021-01-15)
+## [0.143.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.142.3...interface-ipfs-core@0.143.0) (2021-01-15)
 
 
 ### chore
@@ -450,7 +482,7 @@ Co-authored-by: Hugo Dias <hugomrdias@gmail.com>
 
 
 
-# [0.142.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.141.0...interface-ipfs-core@0.142.0) (2020-11-09)
+## [0.142.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.141.0...interface-ipfs-core@0.142.0) (2020-11-09)
 
 
 ### Features
@@ -461,7 +493,7 @@ Co-authored-by: Hugo Dias <hugomrdias@gmail.com>
 
 
 
-# [0.141.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.140.0...interface-ipfs-core@0.141.0) (2020-10-28)
+## [0.141.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.140.0...interface-ipfs-core@0.141.0) (2020-10-28)
 
 
 ### Bug Fixes
@@ -485,7 +517,7 @@ Co-authored-by: Geoffrey Cohler <g.cohler@computer.org>
 
 
 
-# [0.140.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.139.1...interface-ipfs-core@0.140.0) (2020-09-03)
+## [0.140.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.139.1...interface-ipfs-core@0.140.0) (2020-09-03)
 
 
 ### Bug Fixes
@@ -515,7 +547,7 @@ Co-authored-by: Geoffrey Cohler <g.cohler@computer.org>
 
 
 
-# [0.139.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.138.0...interface-ipfs-core@0.139.0) (2020-08-12)
+## [0.139.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.138.0...interface-ipfs-core@0.139.0) (2020-08-12)
 
 
 ### Bug Fixes
@@ -536,7 +568,7 @@ Co-authored-by: Geoffrey Cohler <g.cohler@computer.org>
 
 
 
-# [0.138.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.137.0...interface-ipfs-core@0.138.0) (2020-07-16)
+## [0.138.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.137.0...interface-ipfs-core@0.138.0) (2020-07-16)
 
 
 ### Bug Fixes
@@ -553,7 +585,7 @@ Co-authored-by: Geoffrey Cohler <g.cohler@computer.org>
 
 
 
-# [0.137.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.136.0...interface-ipfs-core@0.137.0) (2020-06-24)
+## [0.137.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.136.0...interface-ipfs-core@0.137.0) (2020-06-24)
 
 
 ### Features
@@ -564,7 +596,7 @@ Co-authored-by: Geoffrey Cohler <g.cohler@computer.org>
 
 
 
-# [0.136.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.135.1...interface-ipfs-core@0.136.0) (2020-06-05)
+## [0.136.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.135.1...interface-ipfs-core@0.136.0) (2020-06-05)
 
 
 ### Features
@@ -583,7 +615,7 @@ Co-authored-by: Geoffrey Cohler <g.cohler@computer.org>
 
 
 
-# [0.135.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.134.3...interface-ipfs-core@0.135.0) (2020-05-18)
+## [0.135.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.134.3...interface-ipfs-core@0.135.0) (2020-05-18)
 
 
 ### Bug Fixes
@@ -631,7 +663,7 @@ Co-authored-by: Geoffrey Cohler <g.cohler@computer.org>
 
 
 
-# [0.134.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.133.1...interface-ipfs-core@0.134.0) (2020-04-16)
+## [0.134.0](https://github.com/ipfs/js-ipfs/compare/interface-ipfs-core@0.133.1...interface-ipfs-core@0.134.0) (2020-04-16)
 
 
 ### Bug Fixes
@@ -705,7 +737,7 @@ on small files with CIDv1.
 
 
 <a name="0.132.0"></a>
-# [0.132.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.131.7...v0.132.0) (2020-02-09)
+## [0.132.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.131.7...v0.132.0) (2020-02-09)
 
 
 ### Bug Fixes
@@ -785,7 +817,7 @@ on small files with CIDv1.
 
 
 <a name="0.131.0"></a>
-# [0.131.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.130.0...v0.131.0) (2020-01-31)
+## [0.131.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.130.0...v0.131.0) (2020-01-31)
 
 
 ### Bug Fixes
@@ -795,7 +827,7 @@ on small files with CIDv1.
 
 
 <a name="0.130.0"></a>
-# [0.130.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.129.0...v0.130.0) (2020-01-29)
+## [0.130.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.129.0...v0.130.0) (2020-01-29)
 
 
 ### Code Refactoring
@@ -822,27 +854,27 @@ on small files with CIDv1.
 
 
 <a name="0.129.0"></a>
-# [0.129.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.128.0...v0.129.0) (2020-01-23)
+## [0.129.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.128.0...v0.129.0) (2020-01-23)
 
 
 
 <a name="0.128.0"></a>
-# [0.128.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.127.0...v0.128.0) (2020-01-22)
+## [0.128.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.127.0...v0.128.0) (2020-01-22)
 
 
 
 <a name="0.127.0"></a>
-# [0.127.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.126.0...v0.127.0) (2020-01-11)
+## [0.127.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.126.0...v0.127.0) (2020-01-11)
 
 
 
 <a name="0.126.0"></a>
-# [0.126.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.125.0...v0.126.0) (2020-01-09)
+## [0.126.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.125.0...v0.126.0) (2020-01-09)
 
 
 
 <a name="0.125.0"></a>
-# [0.125.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.124.1...v0.125.0) (2019-12-11)
+## [0.125.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.124.1...v0.125.0) (2019-12-11)
 
 
 ### Bug Fixes
@@ -861,22 +893,22 @@ on small files with CIDv1.
 
 
 <a name="0.124.0"></a>
-# [0.124.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.123.0...v0.124.0) (2019-12-02)
+## [0.124.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.123.0...v0.124.0) (2019-12-02)
 
 
 
 <a name="0.123.0"></a>
-# [0.123.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.122.0...v0.123.0) (2019-11-27)
+## [0.123.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.122.0...v0.123.0) (2019-11-27)
 
 
 
 <a name="0.122.0"></a>
-# [0.122.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.121.0...v0.122.0) (2019-11-26)
+## [0.122.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.121.0...v0.122.0) (2019-11-26)
 
 
 
 <a name="0.121.0"></a>
-# [0.121.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.120.0...v0.121.0) (2019-11-19)
+## [0.121.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.120.0...v0.121.0) (2019-11-19)
 
 
 ### Bug Fixes
@@ -886,7 +918,7 @@ on small files with CIDv1.
 
 
 <a name="0.120.0"></a>
-# [0.120.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.119.0...v0.120.0) (2019-11-19)
+## [0.120.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.119.0...v0.120.0) (2019-11-19)
 
 
 ### Bug Fixes
@@ -896,12 +928,12 @@ on small files with CIDv1.
 
 
 <a name="0.119.0"></a>
-# [0.119.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.118.0...v0.119.0) (2019-11-11)
+## [0.119.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.118.0...v0.119.0) (2019-11-11)
 
 
 
 <a name="0.118.0"></a>
-# [0.118.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.117.2...v0.118.0) (2019-11-06)
+## [0.118.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.117.2...v0.118.0) (2019-11-06)
 
 
 ### Features
@@ -918,7 +950,7 @@ on small files with CIDv1.
 
 
 
-# [0.117.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.116.0...v0.117.0) (2019-10-04)
+## [0.117.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.116.0...v0.117.0) (2019-10-04)
 
 
 ### Documentation
@@ -933,7 +965,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 
-# [0.116.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.115.3...v0.116.0) (2019-10-04)
+## [0.116.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.115.3...v0.116.0) (2019-10-04)
 
 
 ### Features
@@ -963,12 +995,12 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.115.0"></a>
-# [0.115.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.114.0...v0.115.0) (2019-09-25)
+## [0.115.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.114.0...v0.115.0) (2019-09-25)
 
 
 
 <a name="0.114.0"></a>
-# [0.114.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.113.1...v0.114.0) (2019-09-16)
+## [0.114.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.113.1...v0.114.0) (2019-09-16)
 
 
 ### Bug Fixes
@@ -989,7 +1021,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.113.0"></a>
-# [0.113.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.112.0...v0.113.0) (2019-09-05)
+## [0.113.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.112.0...v0.113.0) (2019-09-05)
 
 
 ### Bug Fixes
@@ -999,7 +1031,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.112.0"></a>
-# [0.112.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.111.1...v0.112.0) (2019-09-03)
+## [0.112.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.111.1...v0.112.0) (2019-09-03)
 
 
 ### Bug Fixes
@@ -1019,12 +1051,12 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.111.0"></a>
-# [0.111.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.110.0...v0.111.0) (2019-08-28)
+## [0.111.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.110.0...v0.111.0) (2019-08-28)
 
 
 
 <a name="0.110.0"></a>
-# [0.110.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.109.1...v0.110.0) (2019-08-27)
+## [0.110.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.109.1...v0.110.0) (2019-08-27)
 
 
 ### Bug Fixes
@@ -1039,7 +1071,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.109.0"></a>
-# [0.109.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.108.1...v0.109.0) (2019-07-26)
+## [0.109.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.108.1...v0.109.0) (2019-07-26)
 
 
 ### Bug Fixes
@@ -1060,7 +1092,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.108.0"></a>
-# [0.108.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.107.3...v0.108.0) (2019-07-17)
+## [0.108.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.107.3...v0.108.0) (2019-07-17)
 
 
 ### Features
@@ -1090,7 +1122,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.107.0"></a>
-# [0.107.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.106.0...v0.107.0) (2019-07-11)
+## [0.107.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.106.0...v0.107.0) (2019-07-11)
 
 
 ### Bug Fixes
@@ -1100,7 +1132,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.106.0"></a>
-# [0.106.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.105.1...v0.106.0) (2019-07-05)
+## [0.106.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.105.1...v0.106.0) (2019-07-05)
 
 
 
@@ -1115,7 +1147,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.105.0"></a>
-# [0.105.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.104.2...v0.105.0) (2019-06-20)
+## [0.105.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.104.2...v0.105.0) (2019-06-20)
 
 
 ### Features
@@ -1142,17 +1174,17 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.104.0"></a>
-# [0.104.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.103.0...v0.104.0) (2019-05-24)
+## [0.104.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.103.0...v0.104.0) (2019-05-24)
 
 
 
 <a name="0.103.0"></a>
-# [0.103.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.102.0...v0.103.0) (2019-05-21)
+## [0.103.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.102.0...v0.103.0) (2019-05-21)
 
 
 
 <a name="0.102.0"></a>
-# [0.102.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.101.1...v0.102.0) (2019-05-16)
+## [0.102.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.101.1...v0.102.0) (2019-05-16)
 
 
 ### Features
@@ -1172,7 +1204,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.101.0"></a>
-# [0.101.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.100.1...v0.101.0) (2019-05-15)
+## [0.101.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.100.1...v0.101.0) (2019-05-15)
 
 
 
@@ -1187,7 +1219,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.100.0"></a>
-# [0.100.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.99.2...v0.100.0) (2019-05-08)
+## [0.100.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.99.2...v0.100.0) (2019-05-08)
 
 
 
@@ -1207,7 +1239,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.99.0"></a>
-# [0.99.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.98.1...v0.99.0) (2019-03-13)
+## [0.99.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.98.1...v0.99.0) (2019-03-13)
 
 
 ### Bug Fixes
@@ -1223,7 +1255,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.98.0"></a>
-# [0.98.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.97.1...v0.98.0) (2019-02-26)
+## [0.98.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.97.1...v0.98.0) (2019-02-26)
 
 
 
@@ -1238,7 +1270,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.97.0"></a>
-# [0.97.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.96.1...v0.97.0) (2019-02-19)
+## [0.97.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.96.1...v0.97.0) (2019-02-19)
 
 
 ### Bug Fixes
@@ -1254,22 +1286,22 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.96.0"></a>
-# [0.96.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.95.0...v0.96.0) (2019-01-14)
+## [0.96.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.95.0...v0.96.0) (2019-01-14)
 
 
 
 <a name="0.95.0"></a>
-# [0.95.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.94.0...v0.95.0) (2019-01-04)
+## [0.95.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.94.0...v0.95.0) (2019-01-04)
 
 
 
 <a name="0.94.0"></a>
-# [0.94.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.93.0...v0.94.0) (2018-12-16)
+## [0.94.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.93.0...v0.94.0) (2018-12-16)
 
 
 
 <a name="0.93.0"></a>
-# [0.93.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.92.0...v0.93.0) (2018-12-14)
+## [0.93.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.92.0...v0.93.0) (2018-12-14)
 
 
 ### Bug Fixes
@@ -1280,7 +1312,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.92.0"></a>
-# [0.92.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.91.1...v0.92.0) (2018-12-12)
+## [0.92.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.91.1...v0.92.0) (2018-12-12)
 
 
 ### Bug Fixes
@@ -1300,7 +1332,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.91.0"></a>
-# [0.91.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.90.0...v0.91.0) (2018-12-10)
+## [0.91.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.90.0...v0.91.0) (2018-12-10)
 
 
 ### Bug Fixes
@@ -1313,12 +1345,12 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.90.0"></a>
-# [0.90.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.89.0...v0.90.0) (2018-12-05)
+## [0.90.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.89.0...v0.90.0) (2018-12-05)
 
 
 
 <a name="0.89.0"></a>
-# [0.89.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.88.0...v0.89.0) (2018-12-03)
+## [0.89.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.88.0...v0.89.0) (2018-12-03)
 
 
 ### Bug Fixes
@@ -1329,17 +1361,17 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.88.0"></a>
-# [0.88.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.87.0...v0.88.0) (2018-11-27)
+## [0.88.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.87.0...v0.88.0) (2018-11-27)
 
 
 
 <a name="0.87.0"></a>
-# [0.87.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.86.0...v0.87.0) (2018-11-26)
+## [0.87.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.86.0...v0.87.0) (2018-11-26)
 
 
 
 <a name="0.86.0"></a>
-# [0.86.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.85.0...v0.86.0) (2018-11-12)
+## [0.86.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.85.0...v0.86.0) (2018-11-12)
 
 
 ### Features
@@ -1349,7 +1381,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.85.0"></a>
-# [0.85.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.84.3...v0.85.0) (2018-11-12)
+## [0.85.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.84.3...v0.85.0) (2018-11-12)
 
 
 ### Bug Fixes
@@ -1379,7 +1411,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.84.0"></a>
-# [0.84.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.83.0...v0.84.0) (2018-10-31)
+## [0.84.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.83.0...v0.84.0) (2018-10-31)
 
 
 ### Bug Fixes
@@ -1390,27 +1422,27 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.83.0"></a>
-# [0.83.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.82.0...v0.83.0) (2018-10-30)
+## [0.83.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.82.0...v0.83.0) (2018-10-30)
 
 
 
 <a name="0.82.0"></a>
-# [0.82.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.81.0...v0.82.0) (2018-10-30)
+## [0.82.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.81.0...v0.82.0) (2018-10-30)
 
 
 
 <a name="0.81.0"></a>
-# [0.81.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.80.0...v0.81.0) (2018-10-29)
+## [0.81.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.80.0...v0.81.0) (2018-10-29)
 
 
 
 <a name="0.80.0"></a>
-# [0.80.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.79.0...v0.80.0) (2018-10-18)
+## [0.80.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.79.0...v0.80.0) (2018-10-18)
 
 
 
 <a name="0.79.0"></a>
-# [0.79.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.78.0...v0.79.0) (2018-10-15)
+## [0.79.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.78.0...v0.79.0) (2018-10-15)
 
 
 ### Bug Fixes
@@ -1420,7 +1452,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.78.0"></a>
-# [0.78.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.77.1...v0.78.0) (2018-09-20)
+## [0.78.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.77.1...v0.78.0) (2018-09-20)
 
 
 ### Bug Fixes
@@ -1444,7 +1476,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.77.0"></a>
-# [0.77.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.76.1...v0.77.0) (2018-08-28)
+## [0.77.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.76.1...v0.77.0) (2018-08-28)
 
 
 ### Bug Fixes
@@ -1466,7 +1498,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.76.0"></a>
-# [0.76.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.75.2...v0.76.0) (2018-08-10)
+## [0.76.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.75.2...v0.76.0) (2018-08-10)
 
 
 ### Features
@@ -1497,7 +1529,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.75.0"></a>
-# [0.75.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.74.1...v0.75.0) (2018-08-06)
+## [0.75.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.74.1...v0.75.0) (2018-08-06)
 
 
 ### Bug Fixes
@@ -1518,7 +1550,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.74.0"></a>
-# [0.74.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.73.0...v0.74.0) (2018-08-02)
+## [0.74.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.73.0...v0.74.0) (2018-08-02)
 
 
 ### Features
@@ -1528,7 +1560,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.73.0"></a>
-# [0.73.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.72.1...v0.73.0) (2018-08-02)
+## [0.73.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.72.1...v0.73.0) (2018-08-02)
 
 
 
@@ -1543,12 +1575,12 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.72.0"></a>
-# [0.72.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.71.0...v0.72.0) (2018-07-05)
+## [0.72.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.71.0...v0.72.0) (2018-07-05)
 
 
 
 <a name="0.71.0"></a>
-# [0.71.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.70.3...v0.71.0) (2018-07-03)
+## [0.71.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.70.3...v0.71.0) (2018-07-03)
 
 
 ### Bug Fixes
@@ -1585,7 +1617,7 @@ in the diff because using `new` stops us from destructuring in js.
 
 
 <a name="0.70.0"></a>
-# [0.70.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.69.1...v0.70.0) (2018-06-27)
+## [0.70.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.69.1...v0.70.0) (2018-06-27)
 
 
 ### Features
@@ -1623,7 +1655,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.69.0"></a>
-# [0.69.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.68.2...v0.69.0) (2018-06-22)
+## [0.69.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.68.2...v0.69.0) (2018-06-22)
 
 
 
@@ -1648,7 +1680,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.68.0"></a>
-# [0.68.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.67.0...v0.68.0) (2018-06-18)
+## [0.68.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.67.0...v0.68.0) (2018-06-18)
 
 
 ### Bug Fixes
@@ -1668,7 +1700,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.67.0"></a>
-# [0.67.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.66.4...v0.67.0) (2018-06-04)
+## [0.67.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.66.4...v0.67.0) (2018-06-04)
 
 
 
@@ -1716,7 +1748,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.66.0"></a>
-# [0.66.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.65.9...v0.66.0) (2018-05-16)
+## [0.66.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.65.9...v0.66.0) (2018-05-16)
 
 
 
@@ -1777,7 +1809,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.65.0"></a>
-# [0.65.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.64.3...v0.65.0) (2018-05-11)
+## [0.65.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.64.3...v0.65.0) (2018-05-11)
 
 
 ### Bug Fixes
@@ -1825,7 +1857,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.64.0"></a>
-# [0.64.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.62.0...v0.64.0) (2018-04-23)
+## [0.64.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.62.0...v0.64.0) (2018-04-23)
 
 
 ### Features
@@ -1836,7 +1868,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.63.0"></a>
-# [0.63.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.62.0...v0.63.0) (2018-04-23)
+## [0.63.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.62.0...v0.63.0) (2018-04-23)
 
 
 ### Features
@@ -1846,12 +1878,12 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.62.0"></a>
-# [0.62.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.61.0...v0.62.0) (2018-04-14)
+## [0.62.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.61.0...v0.62.0) (2018-04-14)
 
 
 
 <a name="0.61.0"></a>
-# [0.61.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.60.1...v0.61.0) (2018-04-10)
+## [0.61.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.60.1...v0.61.0) (2018-04-10)
 
 
 
@@ -1866,7 +1898,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.60.0"></a>
-# [0.60.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.59.0...v0.60.0) (2018-04-05)
+## [0.60.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.59.0...v0.60.0) (2018-04-05)
 
 
 ### Features
@@ -1876,7 +1908,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.59.0"></a>
-# [0.59.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.58.0...v0.59.0) (2018-04-03)
+## [0.59.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.58.0...v0.59.0) (2018-04-03)
 
 
 ### Features
@@ -1886,7 +1918,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.58.0"></a>
-# [0.58.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.57.0...v0.58.0) (2018-03-22)
+## [0.58.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.57.0...v0.58.0) (2018-03-22)
 
 
 ### Bug Fixes
@@ -1896,7 +1928,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.57.0"></a>
-# [0.57.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.56.6...v0.57.0) (2018-03-16)
+## [0.57.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.56.6...v0.57.0) (2018-03-16)
 
 
 
@@ -1942,7 +1974,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.56.0"></a>
-# [0.56.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.55.1...v0.56.0) (2018-03-12)
+## [0.56.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.55.1...v0.56.0) (2018-03-12)
 
 
 ### Features
@@ -1962,7 +1994,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.55.0"></a>
-# [0.55.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.54.0...v0.55.0) (2018-03-09)
+## [0.55.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.54.0...v0.55.0) (2018-03-09)
 
 
 ### Bug Fixes
@@ -1972,7 +2004,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.54.0"></a>
-# [0.54.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.53.0...v0.54.0) (2018-03-07)
+## [0.54.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.53.0...v0.54.0) (2018-03-07)
 
 
 ### Bug Fixes
@@ -1982,7 +2014,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.53.0"></a>
-# [0.53.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.52.0...v0.53.0) (2018-03-07)
+## [0.53.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.52.0...v0.53.0) (2018-03-07)
 
 
 ### Bug Fixes
@@ -1993,7 +2025,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.52.0"></a>
-# [0.52.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.51.0...v0.52.0) (2018-02-15)
+## [0.52.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.51.0...v0.52.0) (2018-02-15)
 
 
 ### Features
@@ -2003,7 +2035,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.51.0"></a>
-# [0.51.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.50.1...v0.51.0) (2018-02-15)
+## [0.51.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.50.1...v0.51.0) (2018-02-15)
 
 
 ### Bug Fixes
@@ -2028,7 +2060,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.50.0"></a>
-# [0.50.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.49.2...v0.50.0) (2018-02-14)
+## [0.50.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.49.2...v0.50.0) (2018-02-14)
 
 
 ### Features
@@ -2058,7 +2090,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.49.0"></a>
-# [0.49.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.48.0...v0.49.0) (2018-02-12)
+## [0.49.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.48.0...v0.49.0) (2018-02-12)
 
 
 ### Bug Fixes
@@ -2068,12 +2100,12 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.48.0"></a>
-# [0.48.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.47.0...v0.48.0) (2018-02-07)
+## [0.48.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.47.0...v0.48.0) (2018-02-07)
 
 
 
 <a name="0.47.0"></a>
-# [0.47.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.46.0...v0.47.0) (2018-02-07)
+## [0.47.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.46.0...v0.47.0) (2018-02-07)
 
 
 ### Features
@@ -2083,17 +2115,17 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.46.0"></a>
-# [0.46.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.44.0...v0.46.0) (2018-02-02)
+## [0.46.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.44.0...v0.46.0) (2018-02-02)
 
 
 
 <a name="0.45.0"></a>
-# [0.45.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.44.0...v0.45.0) (2018-02-02)
+## [0.45.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.44.0...v0.45.0) (2018-02-02)
 
 
 
 <a name="0.44.0"></a>
-# [0.44.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.43.0...v0.44.0) (2018-02-02)
+## [0.44.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.43.0...v0.44.0) (2018-02-02)
 
 
 ### Features
@@ -2105,7 +2137,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.43.0"></a>
-# [0.43.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.42.1...v0.43.0) (2018-01-25)
+## [0.43.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.42.1...v0.43.0) (2018-01-25)
 
 
 
@@ -2120,7 +2152,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.42.0"></a>
-# [0.42.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.41.1...v0.42.0) (2018-01-25)
+## [0.42.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.41.1...v0.42.0) (2018-01-25)
 
 
 ### Bug Fixes
@@ -2147,7 +2179,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.41.0"></a>
-# [0.41.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.40.0...v0.41.0) (2018-01-19)
+## [0.41.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.40.0...v0.41.0) (2018-01-19)
 
 
 ### Features
@@ -2157,17 +2189,17 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.40.0"></a>
-# [0.40.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.39.0...v0.40.0) (2018-01-12)
+## [0.40.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.39.0...v0.40.0) (2018-01-12)
 
 
 
 <a name="0.39.0"></a>
-# [0.39.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.38.0...v0.39.0) (2018-01-10)
+## [0.39.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.38.0...v0.39.0) (2018-01-10)
 
 
 
 <a name="0.38.0"></a>
-# [0.38.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.37.0...v0.38.0) (2018-01-05)
+## [0.38.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.37.0...v0.38.0) (2018-01-05)
 
 
 ### Features
@@ -2178,7 +2210,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.37.0"></a>
-# [0.37.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.36.16...v0.37.0) (2017-12-28)
+## [0.37.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.36.16...v0.37.0) (2017-12-28)
 
 
 
@@ -2283,12 +2315,12 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.36.0"></a>
-# [0.36.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.35.0...v0.36.0) (2017-11-17)
+## [0.36.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.35.0...v0.36.0) (2017-11-17)
 
 
 
 <a name="0.35.0"></a>
-# [0.35.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.34.3...v0.35.0) (2017-11-16)
+## [0.35.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.34.3...v0.35.0) (2017-11-16)
 
 
 ### Bug Fixes
@@ -2313,7 +2345,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.34.0"></a>
-# [0.34.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.33.2...v0.34.0) (2017-11-13)
+## [0.34.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.33.2...v0.34.0) (2017-11-13)
 
 
 
@@ -2333,7 +2365,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.33.0"></a>
-# [0.33.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.32.1...v0.33.0) (2017-10-22)
+## [0.33.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.32.1...v0.33.0) (2017-10-22)
 
 
 
@@ -2348,7 +2380,7 @@ Signed-off-by: Alan Shaw <alan@tableflip.io>
 
 
 <a name="0.32.0"></a>
-# [0.32.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.31.19...v0.32.0) (2017-10-18)
+## [0.32.0](https://github.com/ipfs/interface-ipfs-core/compare/v0.31.19...v0.32.0) (2017-10-18)
 
 
 ### Features

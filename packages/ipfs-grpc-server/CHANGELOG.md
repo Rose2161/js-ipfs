@@ -3,21 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.8.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.4...ipfs-grpc-server@0.8.0) (2021-12-15)
 
+### [0.9.4](https://www.github.com/ipfs/js-ipfs/compare/ipfs-grpc-server-v0.9.3...ipfs-grpc-server-v0.9.4) (2022-06-24)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * ipfs-core bumped from ^0.15.3 to ^0.15.4
+
+### [0.9.3](https://www.github.com/ipfs/js-ipfs/compare/ipfs-grpc-server-v0.9.2...ipfs-grpc-server-v0.9.3) (2022-06-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * ipfs-core-types bumped from ^0.11.0 to ^0.11.1
+  * devDependencies
+    * ipfs-core bumped from ^0.15.2 to ^0.15.3
+
+### [0.9.2](https://www.github.com/ipfs/js-ipfs/compare/ipfs-grpc-server-v0.9.1...ipfs-grpc-server-v0.9.2) (2022-06-13)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * ipfs-core bumped from ^0.15.1 to ^0.15.2
+
+### [0.9.1](https://www.github.com/ipfs/js-ipfs/compare/ipfs-grpc-server-v0.9.0...ipfs-grpc-server-v0.9.1) (2022-06-01)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * ipfs-core bumped from ^0.15.0 to ^0.15.1
+
+## [0.9.0](https://www.github.com/ipfs/js-ipfs/compare/ipfs-grpc-server-v0.8.4...ipfs-grpc-server-v0.9.0) (2022-05-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* This module is now ESM only and there return types of some methods have changed
 
 ### Features
 
-* dht client ([#3947](https://github.com/ipfs/js-ipfs/issues/3947)) ([62d8ecb](https://github.com/ipfs/js-ipfs/commit/62d8ecbc723e693a2544e69172d99c576d187c23))
+* update to libp2p 0.37.x ([#4092](https://www.github.com/ipfs/js-ipfs/issues/4092)) ([74aee8b](https://www.github.com/ipfs/js-ipfs/commit/74aee8b3d78f233c3199a3e9a6c0ac628a31a433))
 
 
-### BREAKING CHANGES
+### Dependencies
 
-* The DHT API has been refactored to return async iterators of query events
-
-
-
-
+* The following workspace dependencies were updated
+  * dependencies
+    * ipfs-core-types bumped from ^0.10.3 to ^0.11.0
+    * ipfs-grpc-protocol bumped from ^0.5.5 to ^0.6.0
+  * devDependencies
+    * ipfs-core bumped from ^0.14.3 to ^0.15.0
 
 ### [0.8.4](https://www.github.com/ipfs/js-ipfs/compare/ipfs-grpc-server-v0.8.3...ipfs-grpc-server-v0.8.4) (2022-04-20)
 
@@ -55,6 +99,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### [0.8.1](https://www.github.com/ipfs/js-ipfs/compare/ipfs-grpc-server-v0.8.0...ipfs-grpc-server-v0.8.1) (2022-01-27)
 
 
+## [0.8.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.4...ipfs-grpc-server@0.8.0) (2021-12-15)
+
+
+### Features
+
+* dht client ([#3947](https://github.com/ipfs/js-ipfs/issues/3947)) ([62d8ecb](https://github.com/ipfs/js-ipfs/commit/62d8ecbc723e693a2544e69172d99c576d187c23))
+
+
+### BREAKING CHANGES
+
+* The DHT API has been refactored to return async iterators of query events
+
 ### Dependencies
 
 * The following workspace dependencies were updated
@@ -63,7 +119,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
   * devDependencies
     * ipfs-core bumped from ^0.13.0 to ^0.14.0
 
-## [0.7.4](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.3...ipfs-grpc-server@0.7.4) (2021-11-24)
+### [0.7.4](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.3...ipfs-grpc-server@0.7.4) (2021-11-24)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -71,7 +127,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.7.3](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.2...ipfs-grpc-server@0.7.3) (2021-11-19)
+### [0.7.3](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.2...ipfs-grpc-server@0.7.3) (2021-11-19)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -79,7 +135,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.7.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.1...ipfs-grpc-server@0.7.2) (2021-11-12)
+### [0.7.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.1...ipfs-grpc-server@0.7.2) (2021-11-12)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -87,7 +143,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.7.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.0...ipfs-grpc-server@0.7.1) (2021-09-28)
+### [0.7.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.7.0...ipfs-grpc-server@0.7.1) (2021-09-28)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -95,7 +151,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.7.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.6...ipfs-grpc-server@0.7.0) (2021-09-24)
+## [0.7.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.6...ipfs-grpc-server@0.7.0) (2021-09-24)
 
 
 ### Features
@@ -111,7 +167,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.6](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.5...ipfs-grpc-server@0.6.6) (2021-09-17)
+### [0.6.6](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.5...ipfs-grpc-server@0.6.6) (2021-09-17)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -119,7 +175,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.5](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.4...ipfs-grpc-server@0.6.5) (2021-09-17)
+### [0.6.5](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.4...ipfs-grpc-server@0.6.5) (2021-09-17)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -127,7 +183,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.4](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.3...ipfs-grpc-server@0.6.4) (2021-09-08)
+### [0.6.4](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.3...ipfs-grpc-server@0.6.4) (2021-09-08)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -135,7 +191,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.3](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.2...ipfs-grpc-server@0.6.3) (2021-09-02)
+### [0.6.3](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.2...ipfs-grpc-server@0.6.3) (2021-09-02)
 
 
 ### Bug Fixes
@@ -147,7 +203,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.1...ipfs-grpc-server@0.6.2) (2021-08-25)
+### [0.6.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.1...ipfs-grpc-server@0.6.2) (2021-08-25)
 
 
 ### Bug Fixes
@@ -158,7 +214,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.0...ipfs-grpc-server@0.6.1) (2021-08-17)
+### [0.6.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.6.0...ipfs-grpc-server@0.6.1) (2021-08-17)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -166,7 +222,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.6.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.5.0...ipfs-grpc-server@0.6.0) (2021-08-17)
+## [0.6.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.5.0...ipfs-grpc-server@0.6.0) (2021-08-17)
 
 
 ### Features
@@ -177,7 +233,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.5.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.4.1...ipfs-grpc-server@0.5.0) (2021-08-11)
+## [0.5.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.4.1...ipfs-grpc-server@0.5.0) (2021-08-11)
 
 
 ### Features
@@ -193,7 +249,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.4.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.4.0...ipfs-grpc-server@0.4.1) (2021-07-30)
+### [0.4.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.4.0...ipfs-grpc-server@0.4.1) (2021-07-30)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -201,7 +257,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.4.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.4...ipfs-grpc-server@0.4.0) (2021-07-27)
+## [0.4.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.4...ipfs-grpc-server@0.4.0) (2021-07-27)
 
 
 ### Features
@@ -221,7 +277,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.3.4](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.3...ipfs-grpc-server@0.3.4) (2021-06-18)
+### [0.3.4](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.3...ipfs-grpc-server@0.3.4) (2021-06-18)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -229,7 +285,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.3.3](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.2...ipfs-grpc-server@0.3.3) (2021-06-05)
+### [0.3.3](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.2...ipfs-grpc-server@0.3.3) (2021-06-05)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -237,7 +293,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.3.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.1...ipfs-grpc-server@0.3.2) (2021-05-26)
+### [0.3.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.1...ipfs-grpc-server@0.3.2) (2021-05-26)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -245,7 +301,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.3.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.0...ipfs-grpc-server@0.3.1) (2021-05-11)
+### [0.3.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.3.0...ipfs-grpc-server@0.3.1) (2021-05-11)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -253,7 +309,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-# [0.3.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.4...ipfs-grpc-server@0.3.0) (2021-05-10)
+## [0.3.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.4...ipfs-grpc-server@0.3.0) (2021-05-10)
 
 
 ### Bug Fixes
@@ -275,7 +331,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.2.4](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.3...ipfs-grpc-server@0.2.4) (2021-03-10)
+### [0.2.4](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.3...ipfs-grpc-server@0.2.4) (2021-03-10)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -283,7 +339,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.2.3](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.2...ipfs-grpc-server@0.2.3) (2021-03-09)
+### [0.2.3](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.2...ipfs-grpc-server@0.2.3) (2021-03-09)
 
 
 ### Bug Fixes
@@ -294,7 +350,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.2.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.1...ipfs-grpc-server@0.2.2) (2021-02-08)
+### [0.2.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.1...ipfs-grpc-server@0.2.2) (2021-02-08)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -302,7 +358,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.2.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.0...ipfs-grpc-server@0.2.1) (2021-02-02)
+### [0.2.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.2.0...ipfs-grpc-server@0.2.1) (2021-02-02)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -310,7 +366,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-# [0.2.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.1.2...ipfs-grpc-server@0.2.0) (2021-02-01)
+## [0.2.0](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.1.2...ipfs-grpc-server@0.2.0) (2021-02-01)
 
 
 ### Bug Fixes
@@ -336,7 +392,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.1.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.1.1...ipfs-grpc-server@0.1.2) (2021-01-22)
+### [0.1.2](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.1.1...ipfs-grpc-server@0.1.2) (2021-01-22)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
@@ -344,7 +400,7 @@ Co-authored-by: achingbrain <alex@achingbrain.net>
 
 
 
-## [0.1.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.1.0...ipfs-grpc-server@0.1.1) (2021-01-20)
+### [0.1.1](https://github.com/ipfs/js-ipfs/compare/ipfs-grpc-server@0.1.0...ipfs-grpc-server@0.1.1) (2021-01-20)
 
 **Note:** Version bump only for package ipfs-grpc-server
 
